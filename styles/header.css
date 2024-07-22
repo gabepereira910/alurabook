@@ -1,0 +1,75 @@
+/*CRIANDO MAIS UM ARQUIVO CSS SEPARADO SOMENTE PARA O HEADER. FACILITA A MANUTENÇÃO*/
+/*styles/header.css*/
+/*OBRIGATÓRIO FAZER O @IMPORT NO STYLE.CSS PRINCIPAL E LINKAR NO HTML*/
+
+.cabecalho {
+    background-color: white;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    /*colocando cabecalho como posição relativa que permite dinamismo com a nossa lista*/
+    position: relative;/*!*/
+}
+
+.container_logo_e_menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*criamos o menu hamburguer como span no html pois o usuario vai interagir com o nosso header*/
+.cabecalho_menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url(/img/Menu.svg);
+    display: flex;
+    
+}
+
+.cabecalho_demais_itens {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/*=============================================================================================================*/
+
+/*fazendo a lista do menu*/
+
+.lista_menu {
+    display: none; /*justificado na linha 49*/
+    position: absolute;/*perimitindo que nossa lista fique fora do cabecalho ao ser chamada*/
+    top: 100%;/*lista rente ao topo*/
+    left: 0;/*lista rente à esquerda*/
+    width: 60vw;/*aumentando a largura da lista*/
+}
+
+/*fazendo com que a lista apareça somente ao ser clicada*/
+/*abaixo veremos uma relação de dependência entre duas classes(classe do input e classe da lista)*/
+.container_botao:checked ~ .lista_menu {
+    display: block;
+}
+
+/*lidando com espaçamento da lista*/
+.lista_menu_titulo, .lista_menu_item {
+    padding: 0.7em;
+    background-color: white;
+}
+
+.lista_menu_titulo {
+    color: rgb(255, 162, 0);
+    font-weight: 600;
+}
+
+.lista_menu_link {
+    color: rgb(13, 13, 13);
+    text-decoration: none;
+    font-weight: 450;
+    text-transform: uppercase;
+}
+
+.container_botao {
+    /*retirando o checkbox visivel*/
+    display: none;
+}
+

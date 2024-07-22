@@ -1,0 +1,22 @@
+@import url(/styles/header.css);
+@import url(/styles/banner.css);
+@import url(/styles/carrossel.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter';
+    background-color: var(--cor-de-fundo);
+}
+
+:root {
+    --cor-de-fundo: rgb(171, 171, 171);
+
+}
+
+/*============================================================================*/
+
